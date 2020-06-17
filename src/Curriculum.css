@@ -1,0 +1,11 @@
+.Curriculum .lattesImage {
+  height: 32px;
+}
+.Curriculum .bioPhoto {
+  width: 100%;
+  border-radius: 0 30% 30% 0;
+}
+.Curriculum .links a {
+  font-size: 2em;
+  color: #183153;
+}
