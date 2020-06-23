@@ -1,16 +1,8 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick(e) {
-    e.preventDefault();
-
-    this.props.handleChange(e.target.name);
-  }
   render() {
     return (
       <div className="Navbar">
@@ -20,7 +12,7 @@ class Navbar extends Component {
         >
           {/* navbar brand and toggle button*/}
 
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" to="/">
             Pantoja
           </a>
           <button
@@ -39,22 +31,20 @@ class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <div className="navbar-nav">
-              <a
+              <NavLink
+                activeClassName="Navbar-active"
                 className="nav-item nav-link"
-                onClick={this.handleClick}
-                href="/"
-                name="Curriculum"
+                to="/"
               >
                 Curriculum
-              </a>
-              <a
+              </NavLink>
+              <NavLink
+                activeClassName="Navbar-active"
                 className="nav-item nav-link"
-                onClick={this.handleClick}
-                href="/"
-                name="Downloads"
+                to="/downloads"
               >
                 Downloads
-              </a>
+              </NavLink>
 
               {/* dropdowns */}
 
@@ -71,30 +61,27 @@ class Navbar extends Component {
                   Publicações
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Journals"
+                    to="/journals"
                   >
                     Journals
-                  </a>
-                  <a
+                  </NavLink>
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Conferências"
+                    to="/conferencias"
                   >
                     Conferências
-                  </a>
-                  <a
+                  </NavLink>
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Livros"
+                    to="/livros"
                   >
                     Livros
-                  </a>
+                  </NavLink>
                 </div>
               </div>
               <div className="nav-item dropdown">
@@ -110,22 +97,20 @@ class Navbar extends Component {
                   Colaboradores
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Parceiros"
+                    to="/parceiros"
                   >
                     Parceiros
-                  </a>
-                  <a
+                  </NavLink>
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Alunos"
+                    to="/alunos"
                   >
                     Alunos
-                  </a>
+                  </NavLink>
                 </div>
               </div>
               <div className="nav-item dropdown">
@@ -141,30 +126,27 @@ class Navbar extends Component {
                   Cursos
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Sistemas Estruturais"
+                    to="/sistemas-estruturais"
                   >
                     Sistemas Estruturais
-                  </a>
-                  <a
+                  </NavLink>
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Patologia"
+                    to="/patologia"
                   >
                     Patologia
-                  </a>
-                  <a
+                  </NavLink>
+                  <NavLink
+                    activeClassName="Navbar-active"
                     className="dropdown-item"
-                    onClick={this.handleClick}
-                    href="/"
-                    name="Reforço"
+                    to="/reforco-estrutural"
                   >
-                    Reforço
-                  </a>
+                    Reforço Estrutural
+                  </NavLink>
                 </div>
               </div>
             </div>
