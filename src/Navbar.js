@@ -80,7 +80,7 @@ class Navbar extends Component {
                     className="dropdown-item"
                     to="/livros"
                   >
-                    Livros
+                    Livro
                   </NavLink>
                 </div>
               </div>
